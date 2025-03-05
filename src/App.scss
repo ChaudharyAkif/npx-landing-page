@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "/src/Scss/bootstarp";
+
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  height: 72px;
+  font-weight: 500;
+}
+li {
+  position: relative;
+  cursor: pointer;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ff0011; /* Line color */
+  transition: width 0.3s ease; /* Animation speed */
+}
+
+/* Hover effect */
+li:hover::after {
+  width: 100%; /* Full width on hover */
+}
